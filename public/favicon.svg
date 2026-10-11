@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#6a5cff"/>
-      <stop offset="1" stop-color="#2fd0d6"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="url(#g)"/>
-  <text x="32" y="44" text-anchor="middle" font-family="Manrope, system-ui, sans-serif" font-size="36" font-weight="800" fill="#fff">i</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Inobil"><title>Inobil</title><rect width="160" height="160" rx="36" fill="#0f1222"/><path fill="#ffffff" transform="translate(31.77 113.17) scale(0.95)" d="M7 0L7-70L20.60-70L20.60 0L7 0Z M38.10 0L38.10-70L50.30-70L81.50-22.50L81.70-22.50L81.70-70L94.80-70L94.80 0L82.60 0L51.40-47.40L51.20-47.40L51.20 0L38.10 0Z"/></svg>
