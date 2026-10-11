@@ -13,13 +13,13 @@ export const site = {
   services: ['Software Development', 'Architecture', 'DevOps', 'Digital Transformation', 'Consultancy'],
   work: {
     heading: 'Selected work',
-    intro: 'Projects delivered with and for clients across the UK, Denmark and Türkiye. All of them team efforts.',
+    intro: 'Projects delivered with and for clients across the UK, Denmark and Turkey. All of them team efforts.',
   },
   about: {
     heading: 'About',
     body:
-      'Inobil is the consultancy of Uğur Özşahin, a multi-disciplinary engineer building software since 2006. The work spans backend engineering, distributed systems, cloud platforms (Azure, AWS), Kubernetes, CI/CD automation and observability, across C#, TypeScript, Go, Java and Python. The approach is simple: systems thinking, reliability without over-engineering, and ownership from design through deployment and operations.',
-    person: 'Uğur Özşahin',
+      'Inobil is the consultancy of Ugur Ozsahin, a multi-disciplinary engineer building software since 2006. The work spans backend engineering, distributed systems, cloud platforms (Azure, AWS), Kubernetes, CI/CD automation and observability, across C#, TypeScript, Go, Java and Python. The approach is simple: systems thinking, reliability without over-engineering, and ownership from design through deployment and operations.',
+    person: 'Ugur Ozsahin',
     title: 'Software Engineer & Consultant',
   },
   contact: {

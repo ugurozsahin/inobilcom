@@ -1,7 +1,7 @@
 ---
-title: Koç Finansman
-client: Koç Finansman
-country: Türkiye
+title: Koc Finansman
+client: Koc Finansman
+country: Turkey
 summary: Tech lead and consultant in the technology department of a Turkish consumer finance company, replacing legacy monoliths with RESTful microservices, integrating Experian PowerCurve and government APIs, and running private cloud, Docker Swarm and CI/CD pipelines.
 tags: [Tech Lead, Microservices, FinTech, DevOps]
 cover: ../../assets/projects/kocfinans.png
@@ -9,7 +9,7 @@ url: https://www.kocfinans.com.tr/
 order: 90
 ---
 
-Koç Finansman is the consumer finance company of Koç Group, one of Türkiye’s largest conglomerates. Inobil worked as tech lead and consultant within its technology department.
+Koc Finansman is the consumer finance company of Koc Group, one of Turkey’s largest conglomerates. Inobil worked as tech lead and consultant within its technology department.
 
 Responsibilities included:
 
