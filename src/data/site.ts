@@ -22,6 +22,28 @@ export const site = {
     person: 'Ugur Ozsahin',
     title: 'Software Engineer & Consultant',
   },
+  /** Structured-data and LLM-facing facts. Not rendered as visible text. */
+  seo: {
+    legalName: 'Inobil',
+    /** ISO 3166-1 alpha-2 country of registration. */
+    addressCountry: 'GB',
+    areaServed: ['United Kingdom'],
+    /** Year the owner started building software professionally. */
+    foundingDate: '2006',
+    knowsAbout: [
+      'Software engineering',
+      'Software architecture',
+      'Cloud platforms (Azure, AWS)',
+      'Kubernetes',
+      'DevOps and CI/CD automation',
+      'Infrastructure as code',
+      'Observability',
+      'Distributed systems and microservices',
+      'Digital transformation',
+      'Optimizely (Episerver) CMS and commerce',
+      'C#, TypeScript, Go, Java, Python',
+    ],
+  },
   contact: {
     heading: 'Contact',
     intro: 'Open to engineering, architecture and DevOps engagements.',

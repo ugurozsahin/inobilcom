@@ -3,15 +3,21 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import { site } from '../data/site';
+import { projectListSchema } from '../lib/schema';
 
 const projects = (await getCollection('projects', ({ data }) => !data.draft)).sort(
   (a, b) => a.data.order - b.data.order,
 );
-const githubHandle = site.contact.github.replace(/^https?:\/\//, '');
-const linkedinHandle = site.contact.linkedin.replace(/^https?:\/\//, '').replace(/\/$/, '');
+/** Display form of a profile URL: no scheme, no www, no trailing slash. */
+const handle = (url: string) => url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+const githubHandle = handle(site.contact.github);
+const linkedinHandle = handle(site.contact.linkedin);
+const schema = [
+  projectListSchema(projects.map((p) => ({ name: p.data.title, url: new URL(`/work/${p.id}/`, Astro.site).toString() }))),
+];
 ---
 
-<Layout>
+<Layout schema={schema}>
   <section class="hero">
     <div class="wrap hero-inner">
       <p class="eyebrow glass">{site.hero.eyebrow}</p>

@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 import Layout from '../../layouts/Layout.astro';
+import { breadcrumbSchema, projectSchema } from '../../lib/schema';
+import { site } from '../../data/site';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => !data.draft);
@@ -11,9 +13,18 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { title, client, country, summary, tags, cover } = project.data;
 const { Content } = await render(project);
+const pageUrl = new URL(`/work/${project.id}/`, Astro.site).toString();
+const schema = [
+  projectSchema({ url: pageUrl, title, summary, client, country, tags, image: new URL(cover.src, Astro.site).toString() }),
+  breadcrumbSchema([
+    { name: site.name, url: new URL('/', Astro.site).toString() },
+    { name: site.work.heading, url: new URL('/#work', Astro.site).toString() },
+    { name: title, url: pageUrl },
+  ]),
+];
 ---
 
-<Layout title={title} description={summary}>
+<Layout title={title} description={summary} schema={schema}>
   <article class="project">
     <div class="wrap">
       <a class="back" href="/#work">← All work</a>
