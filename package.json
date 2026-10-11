@@ -1,0 +1,22 @@
+{
+  "name": "inobilcom",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio website for Inobil — static site built with Astro, content in Markdown.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^7.3.8",
+    "@astrojs/sitemap": "^3.7.4",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^5.9.3"
+  }
+}

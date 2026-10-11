@@ -1,0 +1,121 @@
+---
+import '../styles/global.css';
+import { site } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = site.description } = Astro.props;
+const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.hero.headline}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="nav glass">
+      <div class="nav-inner">
+        <a class="logo gradient-text" href="/">inobil</a>
+        <nav aria-label="Main">
+          <a href="/#work">Work</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span>© {year} {site.name}</span>
+        <span>Built with Markdown &amp; git</span>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    background: color-mix(in srgb, var(--bg) 70%, transparent);
+  }
+  .nav-inner {
+    max-width: 1244px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (min-width: 640px) {
+    .nav-inner {
+      padding: 18px 32px;
+    }
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.03em;
+  }
+  nav {
+    display: flex;
+    gap: 4px;
+    font-size: 15px;
+  }
+  nav a {
+    color: var(--mute);
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 999px;
+    transition: background 0.15s, color 0.15s;
+  }
+  nav a:hover {
+    background: var(--card);
+    color: var(--fg);
+  }
+  footer {
+    border-top: 1px solid var(--line);
+    color: var(--mute);
+    font-size: 13px;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+</style>

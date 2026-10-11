@@ -1,0 +1,171 @@
+/* Theme: modern, auto light/dark. Tokens first, then base styles. */
+
+:root {
+  --bg: #f6f7fb;
+  --fg: #0f1222;
+  --mute: #5b607a;
+  --card: rgba(255, 255, 255, 0.72);
+  --line: rgba(15, 18, 34, 0.08);
+  --a1: #6a5cff;
+  --a2: #2fd0d6;
+  --a3: #ff7ad9;
+  --shadow: rgba(15, 18, 34, 0.25);
+  --font: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0a0b14;
+    --fg: #eef0ff;
+    --mute: #9ea4c4;
+    --card: rgba(22, 24, 44, 0.6);
+    --line: rgba(255, 255, 255, 0.08);
+    --shadow: rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #0a0b14;
+  --fg: #eef0ff;
+  --mute: #9ea4c4;
+  --card: rgba(22, 24, 44, 0.6);
+  --line: rgba(255, 255, 255, 0.08);
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Soft gradient blobs behind the hero */
+body::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 900px;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(520px 420px at 15% 10%, color-mix(in srgb, var(--a1) 35%, transparent), transparent 70%),
+    radial-gradient(520px 420px at 85% 0%, color-mix(in srgb, var(--a2) 30%, transparent), transparent 70%),
+    radial-gradient(420px 360px at 60% 40%, color-mix(in srgb, var(--a3) 22%, transparent), transparent 70%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .wrap {
+    padding: 0 32px;
+  }
+}
+
+/* Reusable bits */
+.glass {
+  background: var(--card);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--a1), var(--a2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--a1) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--a1) 20%, transparent);
+  color: var(--fg);
+}
+
+.sec-head h2 {
+  font-size: clamp(30px, 4vw, 40px);
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.sec-head p {
+  margin-top: 10px;
+  max-width: 560px;
+  color: var(--mute);
+}
+
+section {
+  padding: 72px 0;
+}
+
+/* Rendered Markdown on project pages */
+.prose {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.prose > * + * {
+  margin-top: 1.1em;
+}
+
+.prose ul {
+  padding-left: 1.3em;
+}
+
+.prose li + li {
+  margin-top: 0.4em;
+}
+
+.prose h2 {
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  margin-top: 1.6em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
