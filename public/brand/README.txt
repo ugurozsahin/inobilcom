@@ -13,3 +13,9 @@ inobil-icon-512.png               512x512 tile
 inobil-avatar-square-1024.png     square tile for platforms that apply their own corner radius
 
 Typeface: Chakra Petch by Cadson Demak, SIL Open Font License 1.1.
+
+LinkedIn company page
+linkedin-logo-wordmark-light.png  1024x1024, wordmark on white (recommended logo)
+linkedin-logo-wordmark-dark.png   1024x1024, wordmark on dark
+inobil-avatar-square-1024.png     1024x1024, IN tile (alternative logo)
+linkedin-cover.png                1128x191 banner
