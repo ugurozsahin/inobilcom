@@ -13,7 +13,7 @@ const href = `/work/${project.id}/`;
 ---
 
 <article class="card glass">
-  <a class="shot" href={href} aria-label={`${title} — details`}>
+  <a class="shot" href={href} aria-label={`${title}: details`}>
     <Image src={cover} alt={`Screenshot of ${title}`} width={720} densities={[1, 2]} loading={index < 3 ? 'eager' : 'lazy'} />
   </a>
   <div class="body">

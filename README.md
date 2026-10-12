@@ -4,9 +4,9 @@ Portfolio website for [Inobil](https://www.inobil.com). A static site built with
 
 ## Stack
 
-- **Astro** — static site generator, zero client-side JavaScript by default
-- **Markdown content collections** — one file per project in `src/content/projects/`
-- **GitHub Pages** — deployed by `.github/workflows/deploy.yml` on every push to `main`
+- **Astro**: static site generator, zero client-side JavaScript by default
+- **Markdown content collections**: one file per project in `src/content/projects/`
+- **GitHub Pages**: deployed by `.github/workflows/deploy.yml` on every push to `main`
 
 ## Local development
 

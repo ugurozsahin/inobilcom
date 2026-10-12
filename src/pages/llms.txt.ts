@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import { site } from '../data/site';
 
 /**
- * /llms.txt — a concise, plain-text summary of the site for LLM crawlers and agents.
+ * /llms.txt: a concise, plain-text summary of the site for LLM crawlers and agents.
  * Follows the llms.txt convention (https://llmstxt.org): H1, blockquote summary, sections of links.
  */
 export const GET: APIRoute = async ({ site: siteUrl }) => {

@@ -3,12 +3,12 @@ export const site = {
   name: 'Inobil',
   domain: 'www.inobil.com',
   description:
-    'Inobil is an independent software consultancy: software engineering, cloud & DevOps, distributed systems, Kubernetes, automation and AI integration — delivered end to end.',
+    'Inobil is an independent software consultancy: software engineering, cloud & DevOps, distributed systems, Kubernetes, automation and AI integration, delivered end to end.',
   hero: {
     eyebrow: 'Independent software consultancy',
     headline: 'We design, build and run software systems.',
     lead:
-      'Inobil is an independent software consultancy: software engineering, cloud & DevOps, distributed systems, Kubernetes, automation and AI integration — delivered end to end.',
+      'Inobil is an independent software consultancy: software engineering, cloud & DevOps, distributed systems, Kubernetes, automation and AI integration, delivered end to end.',
   },
   services: ['Software Development', 'Architecture', 'DevOps', 'AI Integration', 'Digital Transformation', 'Consultancy'],
   work: {

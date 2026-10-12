@@ -1,4 +1,4 @@
-# inobil.com — everything is public. Search engines and AI crawlers are welcome.
+# inobil.com: everything is public. Search engines and AI crawlers are welcome.
 
 User-agent: *
 Allow: /

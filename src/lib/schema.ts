@@ -80,7 +80,7 @@ export function projectSchema(p: {
     '@id': `${p.url}#work`,
     url: p.url,
     name: p.title,
-    headline: `${p.title} — ${site.name}`,
+    headline: `${p.title} | ${site.name}`,
     description: p.summary,
     image: p.image,
     keywords: p.tags.join(', '),
