@@ -19,3 +19,8 @@ linkedin-logo-wordmark-light.png  1024x1024, wordmark on white (recommended logo
 linkedin-logo-wordmark-dark.png   1024x1024, wordmark on dark
 inobil-avatar-square-1024.png     1024x1024, IN tile (alternative logo)
 linkedin-cover.png                1128x191 banner
+
+Invoices
+inobil-invoice-logo-136.png       136x31, wordmark on white
+inobil-invoice-logo-136@2x.png    272x63, same at 2x for sharp PDF and print output
+inobil-invoice-logo-136@3x.png    408x94, same at 3x
